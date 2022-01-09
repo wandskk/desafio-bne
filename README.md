@@ -18,8 +18,7 @@
 
 Este projeto foi criando com:
 
-* [NextJS](https://nextjs.org/)
-* [TypeScript](https://www.typescriptlang.org/)
+* [SASS](https://sass-lang.com/)
 * [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
 
 
@@ -27,27 +26,20 @@ Este projeto foi criando com:
 ## Iniciando o projeto
 1. Clone o repositório
  ```sh
-   git clone https://github.com/wandskk/Monty-Hall.git
+   git clone https://github.com/wandskk/desafio-bne.git
  ```
 2. Vá até a pasta
  ```sh
-   cd porta
+   cd desafio-bne
  ```
-3. Instale as dependências do projeto
+3. Para rodar o Pré-processamento de CSS vá até a pasta
  ```sh
-   npm install or npm i
+   cd assets
  ```
-4. Execute o projeto
-```sh
-   npm start
+4. Rode o Pré-processamento de CSS
+ ```sh
+   sass --watch sass/styles.sass:css/styles.css
  ```
-5. Acesse o link
- ```sh 
-    http://localhost:3000/
-```
-
-<!-- VIDEO -->
-
 
 <!-- CONTACT -->
 ## Contact
