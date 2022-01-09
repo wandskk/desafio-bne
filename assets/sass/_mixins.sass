@@ -1,0 +1,8 @@
+@mixin flex-center($align-item:center)
+  display: flex
+  justify-content: center
+  align-items: $align-item
+
+@mixin mobile
+  @media screen and (max-width: 700px)
+    @content

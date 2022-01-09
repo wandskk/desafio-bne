@@ -1,0 +1,141 @@
+@use 'variables'
+@use 'mixins'
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  @include mixins.flex-center
+  background-color: variables.$primary-bg-color
+  flex-direction: column
+  font-family: variables.$primary-font
+
+header
+  padding: 2rem 0
+  font-size: 1.2rem
+
+main
+  @include mixins.flex-center
+  background-color: variables.$form-bg-color
+  font-family: variables.$form-font
+  max-width: 700px
+  width: 100%
+  padding: 2rem 0
+  border-radius: 1rem
+
+  @include mixins.mobile
+    padding: 1rem 2rem
+    border-radius: 0
+    height: 100vh
+    align-items: start
+
+  .text-info
+    text-align: center
+    font-size: 1rem
+    padding-bottom: 2rem
+
+form
+  @include mixins.flex-center
+  flex-direction: column
+  width: 100%
+  font-size: .8rem
+
+  .input-label
+    // O 'none' da função refere-se ao alinhamento no eixo y do flexbox
+    @include mixins.flex-center(none)
+    flex-direction: rows
+    padding: .6rem 0
+    width: 100%
+    align-items: none !important
+
+    @include mixins.mobile
+      flex-direction: column
+
+    div
+      width: 50%
+
+      @include mixins.mobile
+        width: 100%
+        margin-bottom: .2rem
+
+    & > div:nth-child(1)
+      text-align: right
+
+      @include mixins.mobile
+        text-align: left
+
+    & > div:nth-child(2)
+      padding-left: 1rem
+
+      @include mixins.mobile
+        padding: 0
+
+    label
+      white-space: pre
+
+      @include mixins.mobile
+        white-space: normal
+        padding-bottom: 1rem !important
+
+    textarea,
+    input,
+    select
+      border: 1px solid #D9D9D9
+
+    textarea:focus,
+    input:focus,
+    select:focus
+      box-shadow: 0 0 0 0
+      border: 1px solid #D9D9D9
+      outline: 0
+
+    input
+      font-size: variables.$form-font-size
+
+      @include mixins.mobile
+        font-size: .8rem
+
+      &[type=radio], &[type=checkbox]
+        width: .6rem
+
+      &[type=text], &[type=number], &[type=email]
+        width: 80%
+        padding: .1rem
+        padding-left: .2rem
+        height: 1.6rem
+
+        @include mixins.mobile
+          width: 100%
+          height: 1.8rem
+
+    select
+      width: 40%
+      height: 1.6rem
+      background-color: #E9E9ED
+      font-size: variables.$form-font-size
+
+      @include mixins.mobile
+        height: 1.8rem
+
+    textarea
+      font-size: variables.$form-font-size
+      width: 80%
+      padding: .1rem
+      padding-left: .2rem
+
+      @include mixins.mobile
+        width: 100%
+
+  .btn
+    background-color: #6BA2CE
+    border: none
+    border-radius: .2rem
+    font-size: variables.$form-font-size
+    padding: .5rem .8rem
+    color: #FFF
+    cursor: pointer
+
+    &:hover
+      background-color: #3485c5
